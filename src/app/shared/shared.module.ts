@@ -6,18 +6,27 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
 import { CodeComponent } from './code/code.component';
 import { CodeHighlightService } from './code/code-highlight.service';
+import { ComponentWrapperComponent } from './component-wrapper/component-wrapper.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, NgbModule],
     exports: [
       CommonModule,
       RouterModule,
+
       CodeComponent,
-      PageWrapperComponent
+      PageWrapperComponent,
+      ComponentWrapperComponent,
+      SideNavComponent
     ],
     declarations: [
+
+        CodeComponent,
         PageWrapperComponent,
-        CodeComponent
+        ComponentWrapperComponent,
+        SideNavComponent,
+
     ],
     providers: [
         CodeHighlightService

@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 
 import { ComponentsModule } from './components/components.module';
 import { HomeModule } from './home/home.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { HomeModule } from './home/home.module';
 
     HomeModule,
     ComponentsModule,
+    DashboardModule,
     SharedModule
 
   ],
