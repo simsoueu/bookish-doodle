@@ -4,7 +4,10 @@ import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent }
+  { path: '', pathMatch: 'full', redirectTo: 'home'},
+  { path: 'home', component: DefaultComponent },
+  { path: 'about', component: AboutComponent },
+  { path: '**', redirectTo: 'home'}
 ];
 
 @NgModule({

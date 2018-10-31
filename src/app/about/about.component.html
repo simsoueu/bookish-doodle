@@ -64,16 +64,16 @@
   </h3>
   <p>After installing the above dependencies, install <code>ng-bootstrap</code> via:</p>
 
-  <ngbd-code [code]="codeInstall" lang="bash"></ngbd-code>
+  <app-code [code]="codeInstall" lang="bash"></app-code>
 
   <p>Once installed you need to import our main module.</p>
 
-  <ngbd-code [code]="codeRoot" lang="typescript"></ngbd-code>
+  <app-code [code]="codeRoot" lang="typescript"></app-code>
 
   <p>Alternatively you could only import modules with components you need, ex. pagination and alert.
     The resulting bundle will be smaller in this case.</p>
 
-  <ngbd-code [code]="codeOther" lang="typescript"></ngbd-code>
+  <app-code [code]="codeOther" lang="typescript"></app-code>
   <br>
 
   <h4>
@@ -86,7 +86,7 @@
     In your SystemJS config file, <code>map</code> needs to tell the System loader where to look for <code>ng-bootstrap</code>:
   </p>
 
-  <ngbd-code [code]="codeSystem" lang="typescript"></ngbd-code>
+  <app-code [code]="codeSystem" lang="typescript"></app-code>
   <br>
 
   <h3>
