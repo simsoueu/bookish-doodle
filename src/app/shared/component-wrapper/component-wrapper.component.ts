@@ -23,14 +23,13 @@ export class ComponentWrapperComponent {
   tableOfContent: any[] = [];
 
   constructor(public route: ActivatedRoute, private _router: Router, ngZone: NgZone) {
-    // This component is used in route definition 'components'
-    // So next child route will always be ':componentType' & next one will always be ':pageType' (or tab)
+
     this._router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      const parentRoute = this.route.snapshot.parent;
+      const routeSnapshot = this.route.snapshot;
 
-      this.component = parentRoute.url[1].path;
+      this.component = routeSnapshot.url[1].path;
     });
 
     // information extracted from https://getbootstrap.com/docs/4.1/layout/overview/
@@ -53,41 +52,6 @@ export class ComponentWrapperComponent {
     };
     this.tableOfContent = [];
 
-    this.tableOfContent = component.demos.map(demo => {
-      return {
-        fragment: 'wow',
-        title: 'asdf'
-      };
-    });
 
-    // Example instead of undefined
-    // if (component instanceof undefined) {
-    //   this.tableOfContent = component.demos.map(demo => {
-    //     return {
-    //       fragment: demo.id,
-    //       title: demo.title
-    //     };
-    //   });
-    // } else if (component instanceof AppApiPageComponent) {
-    //   let toc = [
-    //     ...getLinks(component.components)
-    //   ];
-
-    //   if (component.classes.length > 0) {
-    //     const klasses = getLinks(component.classes);
-    //     toc = toc.concat(toc.length > 0  ? [{}, ...klasses] : klasses);
-    //   }
-
-    //   if (component.configs.length > 0) {
-    //     const configs = getLinks(component.configs);
-    //     toc = toc.concat(toc.length > 0  ? [{}, ...configs] : configs);
-    //   }
-
-      // this.tableOfContent = toc;
-
-    // } else {
-    //   // TODO: maybe we should also have an abstract class to test instanceof
-    //   this.tableOfContent = Object.values(component.sections).map(section => section);
-    // }
   }
 }

@@ -3,18 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
-import { DashboardModule } from './dashboard/dashboard.module';
 import { StatsComponent } from './dashboard/stats/stats.component';
 // import { StatsComponent } from './dashboard/stats/stats.component';
 
-const DEFAULT_API_PATH = {path: '', pathMatch: 'full', redirectTo: 'examples'};
+// const DEFAULT_API_PATH = {path: '', pathMatch: 'full', redirectTo: 'examples'};
 
 const componentRoutes = [{
   path: 'dashboard/stats',
-  children: [
-    DEFAULT_API_PATH,
-    {path: ':tab', component: StatsComponent}
-  ]}];
+  component: StatsComponent
+  // children: [
+    // DEFAULT_API_PATH,
+    // {path: ':tab?', component: StatsComponent}
+  // ]
+}
+];
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},

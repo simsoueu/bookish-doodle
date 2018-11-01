@@ -2,8 +2,7 @@ import {Component, HostBinding} from '@angular/core';
 import {Router} from '@angular/router';
 
 export const componentsList = [
-  'Accordion', 'Alert', 'Buttons', 'Carousel', 'Collapse', 'Datepicker', 'Dropdown', 'Modal', 'Pagination', 'Popover',
-  'Progressbar', 'Rating', 'Tabs', 'Timepicker', 'Tooltip', 'Typeahead'
+  'Accordion', 'Alert', 'Buttons'
 ];
 
 @Component({
@@ -12,7 +11,7 @@ export const componentsList = [
   styleUrls: ['./side-nav.component.sass']
 })
 export class SideNavComponent {
-  // @HostBinding('attr.class') cssClass = 'sidebar';
+
   components = componentsList;
 
   constructor(private router: Router) {}
