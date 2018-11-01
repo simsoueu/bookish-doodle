@@ -26,8 +26,6 @@ export class ComponentWrapperComponent {
 
   constructor(public route: ActivatedRoute, private _router: Router, ngZone: NgZone) {
 
-
-    console.log(this.data);
     this._router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
