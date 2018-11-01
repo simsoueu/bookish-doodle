@@ -1,7 +1,7 @@
 
 @import '../../../styles.sass'
 @import '../../styles/theme.sass'
-
+@import "~bootstrap/scss/bootstrap-grid.scss"
 
 .sidebar-collapsed
     top: 0
@@ -22,4 +22,19 @@ header.title
     border-bottom: 1px solid #ddd
 
 div, p
-    font-family: $font-default        
+    font-family: $font-default
+
+   
+.banana 
+  @include make-col-ready;
+  @include media-breakpoint-up(sm) 
+    @include make-col(6);
+  
+  @include media-breakpoint-up(md) 
+    @include make-col(4);
+  
+  p 
+    font-size: 3rem;
+    color: yellow;
+    font-weight: 600;
+  

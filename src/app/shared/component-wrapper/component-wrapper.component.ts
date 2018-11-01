@@ -1,4 +1,4 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, NgZone, Input } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 // import { AppApiPageComponent } from '../api-page/api.component';
@@ -13,6 +13,8 @@ import { filter } from 'rxjs/operators';
 export class ComponentWrapperComponent {
   activeTab = 'examples';
 
+  @Input() data: string;
+
   component: string;
 
   isLargeScreenOrLess: boolean;
@@ -24,6 +26,8 @@ export class ComponentWrapperComponent {
 
   constructor(public route: ActivatedRoute, private _router: Router, ngZone: NgZone) {
 
+
+    console.log(this.data);
     this._router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
