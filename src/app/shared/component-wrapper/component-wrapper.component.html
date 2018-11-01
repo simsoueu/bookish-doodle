@@ -46,18 +46,7 @@
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente explicabo quibusdam atque. Fuga, unde voluptatum dicta itaque architecto hic quae nemo, eligendi rerum aspernatur error, cupiditate sit! Enim, error doloremque.
 
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolores quae sint nam, dolor provident. Ipsam nemo consequuntur repellat cupiditate? Numquam, quam. Modi incidunt mollitia, nihil odit et delectus! Quam!
-        <div class="col-12 col-xl-9 px-md-0 pr-xl-4">
-          <router-outlet (activate)="updateNavigation($event)"></router-outlet>
-        </div>
 
-        <div class="col-12 col-xl-3 d-none d-xl-block contextual-nav" *ngIf="!isLargeScreenOrLess">
-          <ul class="nav flex-column text-muted pt-4">
-            <li *ngFor="let topic of tableOfContent" class="nav-item">
-              <a *ngIf="topic.title else divider" class="nav-link" [routerLink]="['.', this.activeTab]" [fragment]="topic.fragment">{{topic.title}}</a>
-            </li>
-            <ng-template #divider>&nbsp;</ng-template>
-          </ul>
-        </div>
       </section>
 
     </div>
