@@ -4,11 +4,12 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 
 import { StatsComponent } from './dashboard/stats/stats.component';
+import { OptionsComponent } from './dashboard/options/options.component';
 
-const componentRoutes = [{
-  path: 'dashboard/stats',
-  component: StatsComponent
-  }];
+const componentRoutes = [
+  { path: 'dashboard/stats', component: StatsComponent },
+  { path: 'dashboard/options', component: OptionsComponent }
+];
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},

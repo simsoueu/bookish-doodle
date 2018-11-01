@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 import { StatsComponent } from './stats/stats.component';
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
+import { OptionsComponent } from './options/options.component';
 
 @NgModule({
     imports: [CommonModule, RouterModule, NgbModule, SharedModule, ComponentsModule],
@@ -15,11 +16,15 @@ import { ComponentsModule } from '../components/components.module';
       RouterModule,
 
       StatsComponent,
+      OptionsComponent,
       DashboardComponent
     ],
     declarations: [
+
+        OptionsComponent,
+        StatsComponent,
         DashboardComponent,
-        StatsComponent
+
     ]
   })
   export class DashboardModule {

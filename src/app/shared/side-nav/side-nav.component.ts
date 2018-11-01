@@ -1,8 +1,8 @@
-import {Component, HostBinding} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 export const componentsList = [
-  'Accordion', 'Alert', 'Buttons'
+  'Accordion', 'Alert', 'Buttons', 'Stats', 'Options'
 ];
 
 @Component({
