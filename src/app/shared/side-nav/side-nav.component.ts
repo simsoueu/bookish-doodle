@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, HostBinding} from '@angular/core';
 import {Router} from '@angular/router';
 
 export const componentsList = [
@@ -9,8 +9,10 @@ export const componentsList = [
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
+  styleUrls: ['./side-nav.component.sass']
 })
 export class SideNavComponent {
+  // @HostBinding('attr.class') cssClass = 'sidebar';
   components = componentsList;
 
   constructor(private router: Router) {}

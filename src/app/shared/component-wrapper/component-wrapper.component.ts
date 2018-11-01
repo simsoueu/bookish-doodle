@@ -6,7 +6,8 @@ import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-component-wrapper',
-  templateUrl: 'component-wrapper.component.html'
+  templateUrl: 'component-wrapper.component.html',
+  styleUrls: ['./component-wrapper.component.sass']
 })
 
 export class ComponentWrapperComponent {
@@ -28,11 +29,8 @@ export class ComponentWrapperComponent {
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
       const parentRoute = this.route.snapshot.parent;
-      const tabRoute = this.route.snapshot.firstChild;
 
       this.component = parentRoute.url[1].path;
-      this.activeTab = tabRoute.url[0].path;
-
     });
 
     // information extracted from https://getbootstrap.com/docs/4.1/layout/overview/
@@ -54,6 +52,14 @@ export class ComponentWrapperComponent {
       }));
     };
     this.tableOfContent = [];
+
+    this.tableOfContent = component.demos.map(demo => {
+      return {
+        fragment: 'wow',
+        title: 'asdf'
+      };
+    });
+
     // Example instead of undefined
     // if (component instanceof undefined) {
     //   this.tableOfContent = component.demos.map(demo => {
@@ -77,7 +83,7 @@ export class ComponentWrapperComponent {
     //     toc = toc.concat(toc.length > 0  ? [{}, ...configs] : configs);
     //   }
 
-    //   this.tableOfContent = toc;
+      // this.tableOfContent = toc;
 
     // } else {
     //   // TODO: maybe we should also have an abstract class to test instanceof

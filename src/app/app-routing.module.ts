@@ -10,7 +10,7 @@ import { StatsComponent } from './dashboard/stats/stats.component';
 const DEFAULT_API_PATH = {path: '', pathMatch: 'full', redirectTo: 'examples'};
 
 const componentRoutes = [{
-  path: 'components/stats',
+  path: 'dashboard/stats',
   children: [
     DEFAULT_API_PATH,
     {path: ':tab', component: StatsComponent}
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home'},
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'dashboard', pathMatch: 'full', redirectTo: 'components/stats'  },
+  { path: 'dashboard', pathMatch: 'full', redirectTo: 'dashboard/stats'  },
   ...componentRoutes,
   { path: '**', redirectTo: 'home'}
 ];

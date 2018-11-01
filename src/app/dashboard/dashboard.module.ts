@@ -6,9 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard.component';
 import { StatsComponent } from './stats/stats.component';
 import { SharedModule } from '../shared/shared.module';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
-    imports: [CommonModule, RouterModule, NgbModule, SharedModule],
+    imports: [CommonModule, RouterModule, NgbModule, SharedModule, ComponentsModule],
     exports: [
       CommonModule,
       RouterModule,
